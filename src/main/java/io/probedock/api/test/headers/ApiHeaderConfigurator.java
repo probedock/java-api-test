@@ -13,7 +13,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ApiHeaderConfigurator {
-
 	/**
 	 * Returns the type of API header configurator that will be used to configure request headers.
 	 *

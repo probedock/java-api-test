@@ -18,15 +18,15 @@ import org.apache.http.util.EntityUtils;
  * @author Simon Oulevay <simon.oulevay@probedock.io>
  */
 public class ApiTestResponse {
-
 	/**
 	 * The internal Apache HTTP response.
 	 */
-	private HttpResponse response;
+	private final HttpResponse response;
+
 	/**
 	 * The cached response body.
 	 */
-	private String responseBody;
+	private final String responseBody;
 
 	/**
 	 * URI from the request

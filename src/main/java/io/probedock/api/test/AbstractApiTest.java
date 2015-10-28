@@ -43,26 +43,29 @@ import org.junit.rules.TestRule;
  * @author Laurent Prevost, laurent.prevost@probedock.io
  */
 public abstract class AbstractApiTest {
-
 	/**
 	 * JUnit rule to create and release an HTTP client for each test.
 	 */
 	private ApiTestClientRule clientRule;
+
 	/**
 	 * JUnit rule to create a headers manager for each test.
 	 */
 	private ApiTestHeadersManagerRule headersManagerRule;
+	
 	/**
 	 * JUnit rule to configure request headers for each test based on the
 	 * {@link ApiHeaderConfigurator} annotation on the test class (if present).
 	 */
 	private ApiTestHeaderConfigurationRule headerConfigurationRule;
+	
 	/**
 	 * The default API entry point (must be provided by implementations).
 	 *
 	 * @see #getEntryPoint()
 	 */
 	private String entryPoint;
+	
 	/**
 	 * Chain of JUnit rules to apply to each test.
 	 */

@@ -17,12 +17,10 @@ import org.hamcrest.Description;
  * @author Laurent Prevost <laurent.prevost@forbes-digital.com>
  */
 public class ApiErrorResponseMatcher extends BaseMatcher<ApiTestResponse> {
-
-	//<editor-fold defaultstate="collapsed" desc="Static Imports">
 	public static ApiErrorResponseMatcher isApiErrorResponse(int expectedHttpStatusCode) {
 		return new ApiErrorResponseMatcher(expectedHttpStatusCode);
 	}
-	//</editor-fold>
+
 	private Integer expectedHttpStatusCode;
 	private List<ErrorExpectation> expectedErrors;
 	private boolean isNonNullResponse;
@@ -272,9 +270,9 @@ public class ApiErrorResponseMatcher extends BaseMatcher<ApiTestResponse> {
 
 	private static class ErrorExpectation {
 
-		private int code;
-		private String locationType;
-		private String location;
+		private final int code;
+		private final String locationType;
+		private final String location;
 		private String message;
 		private Pattern messagePattern;
 

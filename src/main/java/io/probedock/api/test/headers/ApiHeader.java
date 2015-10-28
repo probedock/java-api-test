@@ -10,11 +10,11 @@ import io.probedock.api.test.client.ApiTestRequest;
  * @author Laurent Prevost <laurent.prevost@probedock.io>
  */
 public class ApiHeader {
-
 	/**
 	 * Header name.
 	 */
 	private String name;
+	
 	/**
 	 * Header value.
 	 */
@@ -62,6 +62,6 @@ public class ApiHeader {
 	 * @return the header value
 	 */
 	public String computeValue(ApiTestRequest request) {
-		return value != null ? value.toString() : null;
+		return value;
 	}
 }

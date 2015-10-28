@@ -12,11 +12,10 @@ import org.apache.http.message.BasicNameValuePair;
  * @author Simon Oulevay <simon.oulevay@probedock.io>
  */
 public class ApiTestFormUrlEncoded {
-
 	/**
 	 * List of Apache name/value pair objects.
 	 */
-	private List<NameValuePair> pairs;
+	private final List<NameValuePair> pairs;
 
 	/**
 	 * Constructs an empty container.

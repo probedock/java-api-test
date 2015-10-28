@@ -20,7 +20,7 @@ public class ApiTestClientRule extends ExternalResource {
 	/**
 	 * Client configuration
 	 */
-	private IApiTestClientConfiguration clientConfiguration;
+	private final IApiTestClientConfiguration clientConfiguration;
 	
 	/**
 	 * Constructor

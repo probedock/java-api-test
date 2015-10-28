@@ -9,7 +9,6 @@ import org.apache.http.HttpHeaders;
  * @author Laurent Prevost <laurent.prevost@probedock.io>
  */
 public class AuthenticationBasicApiHeader extends ApiHeader {
-
 	/**
 	 * Constructs a new header.
 	 *

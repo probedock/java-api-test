@@ -9,15 +9,15 @@ import java.util.List;
  * @author Laurent Prevost <laurent.prevost@probedock.io>
  */
 public class AuthenticationBasicApiHeaderConfiguration implements IApiHeaderConfiguration {
-
 	/**
 	 * The username to use for basic authentication.
 	 */
-	private String user;
+	private final String user;
+	
 	/**
 	 * The password to use for basic authentication.
 	 */
-	private String password;
+	private final String password;
 
 	/**
 	 * Constructs a new configuration.

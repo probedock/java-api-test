@@ -18,6 +18,8 @@ public class AuthenticationHeaderUtils {
 
 	/**
 	 * Returns the current UTC timestamp as string (ISO 8601).
+	 * 
+	 * @return UTC time as string representation
 	 */
 	public static String getUtcTimestampAsString() {
 		Calendar cal = Calendar.getInstance();
@@ -28,6 +30,9 @@ public class AuthenticationHeaderUtils {
 
 	/**
 	 * Returns an ISO 8601 timestamp for the given date.
+	 *
+	 * @param date The date to get the string representation
+	 * @return The ISO 8601 string representation
 	 */
 	public static String getUtcTimestampAsString(Date date) {
 		DateFormat dfm = new SimpleDateFormat(DATE_FORMAT);
@@ -37,6 +42,8 @@ public class AuthenticationHeaderUtils {
 
 	/**
 	 * Returns the current UTC timestamp.
+	 * 
+	 * @return The date timestamp
 	 */
 	public static Date getUtcTimestamp() {
 		return Calendar.getInstance(TimeZone.getTimeZone(UTC_TIMEZONE)).getTime();

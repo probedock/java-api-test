@@ -13,7 +13,7 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
  */
 public class ApiTestMultipartFormData {
 	
-	private MultipartEntityBuilder builder;
+	private final MultipartEntityBuilder builder;
 
 	public ApiTestMultipartFormData() {
 		builder = MultipartEntityBuilder.create();
@@ -47,6 +47,4 @@ public class ApiTestMultipartFormData {
 	public HttpEntity getMultipartEntity() {
 		return builder.build();
 	}
-	
-	
 }

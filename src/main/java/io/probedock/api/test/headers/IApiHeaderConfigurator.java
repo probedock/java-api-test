@@ -8,7 +8,6 @@ import java.util.List;
  * @author Laurent Prevost <laurent.prevost@probedock.io>
  */
 public interface IApiHeaderConfigurator {
-
 	/**
 	 * @return an API header configuration
 	 */

@@ -16,19 +16,20 @@ import org.apache.http.client.utils.URIBuilder;
  * @author Simon Oulevay <simon.oulevay@probedock.io>
  */
 public class ApiUriBuilder {
-
 	/**
 	 * Base URI.
 	 */
-	private String baseUri;
+	private final String baseUri;
+
 	/**
 	 * Query parameters.
 	 */
-	private Map<String, List<Object>> queryParams;
+	private final Map<String, List<Object>> queryParams;
+	
 	/**
 	 * Path elements.
 	 */
-	private List<String> pathElements;
+	private final List<String> pathElements;
 
 	/**
 	 * Constructs an URI builder starting from the specified base URI.

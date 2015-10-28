@@ -10,7 +10,6 @@ import java.util.List;
  * @author Simon Oulevay <simon.oulevay@probedock.io>
  */
 public interface IApiHeaderConfiguration {
-
 	/**
 	 * @return Returns the headers defined by this configuration.
 	 */

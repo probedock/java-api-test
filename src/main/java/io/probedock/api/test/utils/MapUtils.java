@@ -52,6 +52,12 @@ public class MapUtils {
 		}
 	}
 	
+	/**
+	 * Convert a map to a string representation (e.g: for toString())
+	 * 
+	 * @param map The map to convert
+	 * @return The string representation of the map
+	 */
 	public static String mapToString(Map<? extends Object, ? extends Object> map) {
 		StringBuilder sb = new StringBuilder();
 		if (map == null || map.isEmpty()) {

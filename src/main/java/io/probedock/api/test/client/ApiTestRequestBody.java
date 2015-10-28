@@ -11,7 +11,6 @@ import org.apache.http.HttpEntity;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.InputStreamEntity;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 /**
  * HTTP request body wrapper.

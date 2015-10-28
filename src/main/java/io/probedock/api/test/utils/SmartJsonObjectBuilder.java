@@ -14,7 +14,7 @@ import javax.json.JsonValue;
  */
 public class SmartJsonObjectBuilder {
 
-	private JsonObjectBuilder builder;
+	private final JsonObjectBuilder builder;
 
 	public SmartJsonObjectBuilder() {
 		builder = Json.createObjectBuilder();
@@ -190,6 +190,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the JSON value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, JsonValue value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -197,6 +204,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the string value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, String value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -204,6 +218,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the big integer value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, BigInteger value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -211,6 +232,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the big decimal value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, BigDecimal value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -218,6 +246,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the integer value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, Integer value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -225,6 +260,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the long value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, Long value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -232,6 +274,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the double value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, Double value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -239,6 +288,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the boolean value only if not null
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addIfNotNull(String name, Boolean value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -246,6 +302,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the JSON value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, JsonValue value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -255,6 +318,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the string value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, String value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -264,6 +334,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the big integer value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, BigInteger value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -273,6 +350,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the big decimal value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, BigDecimal value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -282,6 +366,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the integer value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, Integer value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -291,6 +382,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the long value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, Long value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -300,6 +398,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the double value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, Double value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -309,6 +414,13 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Add the boolean value but if null, add the null node
+	 * 
+	 * @param name The name of the node
+	 * @param value The value
+	 * @return this
+	 */
 	public SmartJsonObjectBuilder addValueOrNull(String name, Boolean value) {
 		if (value != null) {
 			builder.add(name, value);
@@ -318,6 +430,11 @@ public class SmartJsonObjectBuilder {
 		return this;
 	}
 
+	/**
+	 * Produce the JSON structure
+	 * 
+	 * @return The JSON object built
+	 */
 	public JsonObject build() {
 		return builder.build();
 	}

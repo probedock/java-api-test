@@ -19,11 +19,10 @@ import org.apache.http.util.EntityUtils;
  * @author Laurent Prevost <laurent.prevost@probedock.io>
  */
 public class ApiTestClient {
-
 	/**
 	 * The internal Apache HTTP client.
 	 */
-	private CloseableHttpClient client;
+	private final CloseableHttpClient client;
 
 	/**
 	 * Constructs a new client. The client should be released with {@link #close()} when no longer

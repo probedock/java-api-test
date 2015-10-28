@@ -13,13 +13,10 @@ import java.util.List;
  * @author Simon Oulevay <simon.oulevay@probedock.io>
  */
 public class ApiHeadersManager {
-
-	//<editor-fold defaultstate="collapsed" desc="Header Operations">
 	/**
 	 * Operation that represents the modification of an HTTP request header.
 	 */
 	public static enum Operation implements ApiRequestHeaderModification {
-
 		/**
 		 * Add a header. The header is appended to the end of the list. Previous headers with the
 		 * same name are kept.
@@ -30,6 +27,7 @@ public class ApiHeadersManager {
 				request.addHeader(header.getName(), header.computeValue(request));
 			}
 		},
+		
 		/**
 		 * Sets a header. Previous headers with the same name are overwritten.
 		 */
@@ -39,6 +37,7 @@ public class ApiHeadersManager {
 				request.setHeader(header.getName(), header.computeValue(request));
 			}
 		},
+		
 		/**
 		 * Removes a header. All headers with the same name are removed.
 		 */
@@ -49,18 +48,18 @@ public class ApiHeadersManager {
 			}
 		};
 	}
-	//</editor-fold>
+
 	/**
 	 * Header operations to apply to all requests.
 	 */
 	private final List<HeaderOperation> permanentHeaders;
+	
 	/**
 	 * Header operations to apply only to the next request (cleared after calling
 	 * <tt>configure</tt>).
 	 */
 	private final List<HeaderOperation> nextRequestHeaders;
 
-	//<editor-fold defaultstate="collapsed" desc="Constructor">
 	/**
 	 * Constructs an empty headers manager.
 	 */
@@ -68,7 +67,6 @@ public class ApiHeadersManager {
 		permanentHeaders = new ArrayList<>();
 		nextRequestHeaders = new ArrayList<>();
 	}
-	//</editor-fold>
 
 	/**
 	 * Modifies a request header. Call
@@ -172,7 +170,6 @@ public class ApiHeadersManager {
 		return this;
 	}
 
-	//<editor-fold defaultstate="collapsed" desc="Utilities">
 	/**
 	 * Removes header operations that would become superfluous after adding the specified one. For
 	 * example, a previously added SET operation becomes useless if a REMOVE is added for the same
@@ -213,9 +210,7 @@ public class ApiHeadersManager {
 			}
 		}
 	}
-	//</editor-fold>
 
-	//<editor-fold defaultstate="collapsed" desc="ApiRequestHeaderModification (interface)">
 	/**
 	 * Modification of an API request header.
 	 */
@@ -229,9 +224,7 @@ public class ApiHeadersManager {
 		 */
 		void apply(ApiTestRequest request, ApiHeader header);
 	}
-	//</editor-fold>
 
-	//<editor-fold defaultstate="collapsed" desc="HeaderOperation (wrapper)">
 	/**
 	 * Wrapper to apply a header operation.
 	 */
@@ -240,11 +233,11 @@ public class ApiHeadersManager {
 		/**
 		 * The header.
 		 */
-		private ApiHeader header;
+		private final ApiHeader header;
 		/**
 		 * The operation to apply to the header.
 		 */
-		private Operation operation;
+		private final Operation operation;
 		
 		/**
 		 * Constructs a new operation.
@@ -280,5 +273,4 @@ public class ApiHeadersManager {
 			operation.apply(request, header);
 		}
 	}
-	//</editor-fold>
 }
