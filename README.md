@@ -8,13 +8,13 @@ We created this library to help writing JSON API testing. We introduced a lot of
 
 1. Put the following dependency in your pom.xml
 
-```xml
-<dependency>
-  <groupId>io.probedock.test</groupId>
-  <artifactId>java-api-test</artifactId>
-  <version>1.0.0</version>
-</dependency>
-```
+  ```xml
+  <dependency>
+    <groupId>io.probedock.test</groupId>
+    <artifactId>java-api-test</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+  ```
 
 2. We need to create a configuration class to enable the possibility to configure a proxy when the tests are run. There is an example of the configuration class which implements `IApiTestClientConfiguration` and the `properties` file with the configuration. The configuraiton is a `Singleton`.
 
