@@ -1,9 +1,5 @@
 package io.probedock.api.test.headers;
 
-import io.probedock.api.test.headers.ApiHeader;
-import io.probedock.api.test.headers.ApiHeadersManager;
-import io.probedock.api.test.headers.IApiHeaderConfiguration;
-
 import static org.mockito.Mockito.*;
 
 import io.probedock.api.test.client.ApiTestRequest;
