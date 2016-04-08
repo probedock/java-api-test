@@ -5,7 +5,7 @@
 
 	<groupId>io.probedock.test</groupId>
 	<artifactId>java-api-test</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>API Test Library</name>
@@ -183,12 +183,12 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.3.3</version>
+			<version>4.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
-			<version>4.3.3</version>
+			<version>4.5.2</version>
 		</dependency>
 
 		<!-- JsonPath dependencies -->
@@ -201,12 +201,12 @@
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path</artifactId>
-			<version>0.8.1</version>
+			<version>2.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path-assert</artifactId>
-			<version>0.8.1</version>
+			<version>2.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>javax</groupId>
