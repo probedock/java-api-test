@@ -12,7 +12,7 @@ We created this library to help writing JSON API testing. We introduced a lot of
   <dependency>
     <groupId>io.probedock.test</groupId>
     <artifactId>java-api-test</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
   </dependency>
   ```
 
