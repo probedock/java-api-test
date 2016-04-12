@@ -4,6 +4,7 @@ import com.jayway.jsonpath.InvalidPathException;
 import com.jayway.jsonpath.JsonPath;
 import io.probedock.api.test.client.ApiTestResponse;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 import net.minidev.json.JSONArray;
@@ -194,12 +195,12 @@ public class ApiErrorResponseMatcher extends BaseMatcher<ApiTestResponse> {
 
 		for (Object object : errors) {
 
-			if (!(object instanceof JSONObject)) {
+			if (!(object instanceof LinkedHashMap)) {
 				invalidErrors.add(object);
 				continue;
 			}
 
-			final JSONObject error = (JSONObject) object;
+			final LinkedHashMap error =  JsonPath.read(object, "$");
 			if (!(error.get("code") instanceof Integer)) {
 				invalidErrors.add(object);
 				continue;
