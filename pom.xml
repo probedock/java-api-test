@@ -5,7 +5,7 @@
 
 	<groupId>io.probedock.test</groupId>
 	<artifactId>java-api-test</artifactId>
-	<version>1.0.1</version>
+	<version>2.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>API Test Library</name>
